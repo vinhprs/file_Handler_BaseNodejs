@@ -24,3 +24,9 @@ App sẽ xử lý tuần tự các tham số nhận vào và phân loại theo c
 Dưới đây là bảng xử lý chi tiết:
 
 ![image](https://user-images.githubusercontent.com/77932499/163224792-4a3f0169-b448-4b0f-ac2a-c2a2201bea68.png)
+
+
+---------- Một vài case---------------
+
+![image](https://user-images.githubusercontent.com/77932499/163225672-d96df810-5423-4ea2-9fcf-29eeac29788b.png)
+
