@@ -1,0 +1,54 @@
+scope
+closure
+event loop
+microtask
+marcotask
+promise, async await
+
+sự khác nhau giữa var let const
+
+hoisting là việc di chuyển các khai báo lên đầu để thực thi code của JS
+VD:
+console.log(foo)//undefined
+console.log(bar)//lỗi
+console.log(mickey)//lỗi
+var foo = 'Hi'
+let bar = 'hello'
+const mickey = 'chiu chiu'
+tất cả các khai báo (function, let, const, var) trong JS đều đc hoisted. Sự khác việt là var khi hoisting thì được khởi tạo giá trị là undefined còn const và let thì không
+hoisting chuẩn:
+var a;
+console.log(a)
+a='a'
+
+Phạm vi sử dụng của let var const
+var : 	+không có block scope, có function-scope or global-scope, var ko thể là block-local or loop-local
+	+nếu có code block ({}) trong cái function, var sẽ trở thành 1 biến cấp hàm (function-level variables)
+	+Nếu chúng ta khai báo cùng 1 biến let 2 lần trong cùng một phạm vi, đó là một lỗi. Với var, chúng ta có thể khai báo lại một biến bất kỳ lúc nào. Nếu chúng ta sử dụng var với một biến đã được khai báo, nó sẽ bị bỏ qua
+
+let:	+khai báo sẽ có scope là block scope
+	+cho phép chúng ta cập nhập giá trị của biến chứ không cho ta tái tạo lại biến đó. Tuy nhiên đối với các block khác nhau thì việc tái tạo khai báo sẽ ko sinh ra lỗi vì đối với từng scope, mỗi biến sẽ dc xem xét là 1 biến riêng khác biệt
+	+let cx có hoisted nhưng let sẽ ko có giá trị khởi tạo nào. dẫn đến gặp lỗi Reference Error
+const:	+tương tự vs let cũng có scope là block scope và hoisting thì chúng ta có thêm 1 kiểu khai báo nữa là const. Trong biến const nếu trường hợp kiểu của biến là primitive (string, number, boolean, null and undefined) thì chúng ta ko thể tái tạo hay cập nhập giá trị mới để thay thế cho giá trị trước đó của biến
+	+
+
+Arrow function được giới thiệu trong verson ES6, nó cung cấp cho chúng ta cú pháp mới và ngắn gọn hơn khai báo hàm thông thường
+Promise: được dùng để xử lý các bất đồng bộ trong JS
+có 4 trạng thái hoạt động trong Promise:
++pending (đang chờ): trạng thái ban đầu của promise, trạng thái này thể hiện promise không thực hiện và cũng không bị từ chối, đnag ở trạng thái chờ xử lý
++Fulfilled(hoàn thành): trạng thái này đã thể hiện trạng thái hoạt động thành công
++Rejected(từ chối): trạng thái bị từ chối, nghĩa là bất đồng bộ không thành công
++Settled : hoạt động là lời hứa bị từ chối hay đã được thực hiện
+Hoisting: là hành vi mặc định của JS nơi mà các biến và hàm khai báo được di chuyển lên trên đầu
+Higher Order Function: là hàm nhận một hàm dưới dạng đối số hoặc trả về dưới dạng đầu ra
+closure được định nghĩa là một trong những hàm được viết lồng vào trong hàm khác. Nó được sử dụng để biến đổi toàn cục, biến cục bộ của chính nó
+var scope function
+let const: scope: block scope
+microtask: là hàm trả về 1 promise, hoạt động khi sử dụng cấu trúc then catch
+những
+các hàm setTimeout, setInterval, callback event được gọi là macrotask
+các code chay từ normal code first rồi tới microtask và macrotask ưu tiên chạy cuối cùng đây dc gọi là event loop
+destructuring là một cú pháp cho phép bạn gán các thuộc tính của một Object hoặc một array
+toán tử Rest (lấy ra những gì còn lại) cú pháp là ...
+toán tử rest khi kết hợp với destructuring, định nghĩa tham số trong hàm
+truyền đối sô trong hàm là spread
